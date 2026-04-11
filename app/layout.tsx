@@ -1,45 +1,21 @@
-import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
-import './globals.css'
+import Menu from "../componentes/Menu";
+import "../estilos/globals.css"; // si ya tienes un archivo de estilos globales
 
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  title: 'VALDOCER | Links',
-  description: 'Todos mis enlaces y redes sociales en un solo lugar',
-  generator: 'v0.app',
-  icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
-  },
-}
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className="font-sans antialiased">
-        {children}
-        <Analytics />
+    <html lang="es">
+      <head>
+        <title>Plataforma de Redes Sociales</title>
+      </head>
+      <body style={{ margin: 0, fontFamily: "Arial, sans-serif", backgroundColor: "#f9f9f9" }}>
+        <Menu />
+        <main style={{ padding: "2rem" }}>
+          {children}
+        </main>
+        <footer style={{ marginTop: "2rem", padding: "1rem", textAlign: "center", background: "#eee" }}>
+          <p>© 2026 Plataforma de Redes Sociales</p>
+        </footer>
       </body>
     </html>
-  )
+  );
 }

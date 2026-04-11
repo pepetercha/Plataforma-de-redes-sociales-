@@ -1,59 +1,33 @@
-"use client"
+import Menu from "../componentes/Menu";
 
-import { useState } from "react"
-import { ProfileHeader } from "@/components/profile-header"
-import { SocialLinks } from "@/components/social-links"
-import { FeaturedLinks } from "@/components/featured-links"
-import { Navigation } from "@/components/navigation"
-
-export default function LinkPage() {
-  const [activeSection, setActiveSection] = useState("links")
-
+export default function Home() {
   return (
-    <main className="min-h-screen bg-background">
-      <div className="mx-auto max-w-4xl px-4 py-8 md:py-16">
-        <div className="grid gap-12 md:grid-cols-[200px_1fr] md:gap-16">
-          {/* Sidebar */}
-          <aside className="flex flex-col gap-8">
-            <ProfileHeader />
-            <Navigation 
-              activeSection={activeSection} 
-              onSectionChange={setActiveSection} 
-            />
-          </aside>
+    <div style={{ fontFamily: "Arial, sans-serif", padding: "2rem" }}>
+      <Menu />
+      <section style={{ marginTop: "2rem" }}>
+        <h1>Bienvenido a la Plataforma de Redes Sociales</h1>
+        <p>
+          Esta es tu página principal. Desde aquí puedes navegar a Configuración,
+          Agregar Usuario o Perfil usando el menú superior.
+        </p>
 
-          {/* Main Content */}
-          <div className="flex flex-col gap-12">
-            {activeSection === "links" && (
-              <>
-                <SocialLinks />
-                <FeaturedLinks />
-              </>
-            )}
-            {activeSection === "about" && (
-              <section>
-                <h2 className="mb-6 font-semibold text-2xl text-foreground">
-                  Sobre mi
-                </h2>
-                <p className="leading-relaxed text-muted-foreground">
-                  Bienvenido a mi espacio digital. Aqui encontraras todos mis enlaces,
-                  redes sociales y contenido favorito en un solo lugar.
-                </p>
-              </section>
-            )}
-            {activeSection === "wishlist" && (
-              <section>
-                <h2 className="mb-6 font-semibold text-2xl text-foreground">
-                  Mi Wishlist
-                </h2>
-                <p className="leading-relaxed text-muted-foreground">
-                  Productos y cosas que me gustaria tener. Proximamente mas detalles.
-                </p>
-              </section>
-            )}
+        <div style={{ display: "flex", gap: "2rem", marginTop: "2rem" }}>
+          <div style={{ flex: 1, padding: "1rem", border: "1px solid #ccc", borderRadius: "8px" }}>
+            <h2>⚙️ Configuración</h2>
+            <p>Administra tus preferencias y ajustes de cuenta.</p>
+          </div>
+
+          <div style={{ flex: 1, padding: "1rem", border: "1px solid #ccc", borderRadius: "8px" }}>
+            <h2>👤 Agregar Usuario</h2>
+            <p>Registra nuevos usuarios en la plataforma.</p>
+          </div>
+
+          <div style={{ flex: 1, padding: "1rem", border: "1px solid #ccc", borderRadius: "8px" }}>
+            <h2>📄 Perfil</h2>
+            <p>Consulta y edita la información de tu perfil.</p>
           </div>
         </div>
-      </div>
-    </main>
-  )
+      </section>
+    </div>
+  );
 }
