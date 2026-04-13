@@ -1,9 +1,9 @@
-import Navigation from "../componentes/navigation"
-import ProfileHeader from "../componentes/profile-header"
-import FeaturedLinks from "../componentes/featured-links"
-import SocialLinks from "../componentes/social-links"
-import Table from "../componentes/ui/table"
-import Chart from "../componentes/ui/chart"
+import Navigation from "@/components/navigation"
+import ProfileHeader from "@/components/profile-header"
+import FeaturedLinks from "@/components/featured-links"
+import SocialLinks from "@/components/social-links"
+import Table from "@/components/ui/table"
+import Chart from "@/components/ui/chart"
 
 export default function StatsPage() {
   const data = [

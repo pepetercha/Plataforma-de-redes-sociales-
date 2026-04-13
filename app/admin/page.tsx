@@ -1,13 +1,15 @@
-import Navigation from "../componentes/navigation"
-import ProfileHeader from "../componentes/profile-header"
-import FeaturedLinks from "../componentes/featured-links"
-import SocialLinks from "../componentes/social-links"
+"use client"
+
+import { Navigation } from "@/components/navigation"
+import { ProfileHeader } from "@/components/profile-header"
+import { FeaturedLinks } from "@/components/featured-links"
+import { SocialLinks } from "@/components/social-links"
 
 export default function AdminPage() {
   return (
     <div>
       {/* Menú de navegación */}
-      <Navigation />
+      <Navigation activeSection="links" onSectionChange={() => {}} />
 
       {/* Encabezado de perfil */}
       <ProfileHeader />
@@ -16,8 +18,7 @@ export default function AdminPage() {
       <main>
         <h1>Panel de Administración</h1>
         <p>
-          Aquí puedes gestionar usuarios, revisar estadísticas y configurar la
-          plataforma de manera avanzada.
+          Aquí puedes gestionar usuarios y administrar la plataforma de manera avanzada.
         </p>
 
         <section>
@@ -32,7 +33,7 @@ export default function AdminPage() {
 
         <section>
           <h2>Configuración Avanzada</h2>
-          <p>Administra permisos, roles y parámetros del sistema.</p>
+          <p>Administra permisos, roles y ajustes de la plataforma.</p>
         </section>
       </main>
 

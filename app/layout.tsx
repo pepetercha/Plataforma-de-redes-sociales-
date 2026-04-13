@@ -1,15 +1,15 @@
 import "./globals.css"
 
-// Imports corregidos apuntando a app/componentes
-import Navigation from "./componentes/navigation"
-import ProfileHeader from "./componentes/profile-header"
-import FeaturedLinks from "./componentes/featured-links"
-import SocialLinks from "./componentes/social-links"
-import ThemeProvider from "./componentes/theme-provider"
+// Imports corregidos apuntando a app/components
+import Navigation from "@/components/navigation"
+import ProfileHeader from "@/components/profile-header"
+import FeaturedLinks from "@/components/featured-links"
+import SocialLinks from "@/components/social-links"
+import ThemeProvider from "@/components/theme-provider"
 
 // Ejemplo de la carpeta ui
-import Button from "./componentes/ui/button"
-import Card from "./componentes/ui/card"
+import Button from "@/components/ui/button"
+import Card from "@/components/ui/card"
 
 export const metadata = {
   title: "Plataforma Social",

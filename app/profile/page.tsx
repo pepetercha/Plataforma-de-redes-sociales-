@@ -1,7 +1,7 @@
-import ProfileHeader from "../componentes/profile-header"
-import SocialLinks from "../componentes/social-links"
-import FeaturedLinks from "../componentes/featured-links"
-import Navigation from "../componentes/navigation"
+import ProfileHeader from "@/components/profile-header"
+import SocialLinks from "@/components/social-links"
+import FeaturedLinks from "@/components/featured-links"
+import Navigation from "@/components/navigation"
 
 export default function ProfilePage() {
   return (

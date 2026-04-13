@@ -1,7 +1,7 @@
-import Navigation from "../componentes/navigation"
-import ProfileHeader from "../componentes/profile-header"
-import FeaturedLinks from "../componentes/featured-links"
-import SocialLinks from "../componentes/social-links"
+import Navigation from "@/components/navigation"
+import ProfileHeader from "@/components/profile-header"
+import FeaturedLinks from "@/components/featured-links"
+import SocialLinks from "@/components/social-links"
 
 export default function ConfigPage() {
   return (
