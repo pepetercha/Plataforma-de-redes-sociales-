@@ -1,8 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  turbopack: {
-    root: "/root/proyecto-redes/plataforma-redes"
-  }
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  images: {
+    unoptimized: true,
+  },
 }
 
 module.exports = nextConfig

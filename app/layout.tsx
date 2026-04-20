@@ -1,4 +1,5 @@
 import "./globals.css"
+import { Analytics } from "@vercel/analytics/next"
 
 // Imports corregidos apuntando a app/components
 import Navigation from "@/components/navigation"
@@ -27,6 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <SocialLinks />
           <main>{children}</main>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   )
